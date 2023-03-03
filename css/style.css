@@ -1,41 +1,48 @@
 @font-face {
-    font-family: "Bebas-Neue";
-    src: url();
+    font-family: "Bebas Neue";
+    src: url(../assets/folder/Bebas_Neue/BebasNeue-Regular.ttf);
 }
 
+@font-face {
+    font-family: "Courier Prime";
+    src: url(../assets/folder/Courier_Prime/CourierPrime-Bold.ttf);
+}
+
+
 /* reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 /* classes genéricas */
 
-layout-grid {
+.layout-grid {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
 }
 
-/* HEADER */
+body {
+    background-color: #080324;
+}
+
+
+/******** HEADER *********/
 
 header {
-    
-    
-    
     background-color: red;
     height: 60px;
-    
 }
-
 
 header .header-flex {
     display: flex;
     justify-content: flex-end;
     align-items: stretch;
-    
     height: 100%;
 }
 
@@ -43,15 +50,107 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 500px;
-    border: 3px solid white;
-    
+    width: 550px;
+    /* border: 3px solid white; */
 }
 
 header nav a {
-    font-family: sans-serif;
+    font-family: "Bebas Neue";
     text-decoration: none;
     color: white;
     text-transform: uppercase;
     font-size: 18px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px black;
+    padding: 15px 20px;
+    border-radius: 8px;
+}
+
+
+/* quando o mouse passa em cima, a cor muda */
+
+header nav a:hover {
+    /* text-shadow: 2px 2px 10px yellow; */
+    background-color: rgba(255, 255, 255, 0.479);
+    color: white;
+}
+
+
+/********* MAIN **********/
+
+main .banner {
+    height: 740px;
+    background-image: url(../imagens/assets_/imagem-fundo-banner.png);
+    /* usado para não duplicar a */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+main .banner-flex {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+main .banner-flex #banner-infobox {
+    width: 560px;
+}
+
+main .banner-flex h1 {
+    border-bottom: 1px solid #FFAF00;
+    font-family: "Bebas Neue";
+    font-size: 93px;
+    color: white;
+
+}
+
+main .banner-flex p {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #F9003D;
+    font-family: "Courier Prime";
+    font-size: 53px;
+    text-transform: uppercase;
+}
+
+
+/************ SOBRE************/
+
+section .layout-grid {
+    display: flex;
+
+    color: white;
+}
+
+section .layout-grid h2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: Bebas Neue;
+    font-size: 64px;
+    color: #F9003D;
+}
+
+section .linha {
+    display: flex;
+    justify-content: space-between;
+    }
+    
+    
+section .linha img{
+    width: 490px;
+    }
+
+section .linha .participantes {
+    width: 590px;
+
+    border: 1px solid yellow;
+}
+
+
+section .participantes h3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
